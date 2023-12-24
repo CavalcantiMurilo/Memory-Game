@@ -50,7 +50,7 @@ const generateGame = () => {
         throw new Error("The dimension of the board must be an even number.")
     }
 
-    const emojis = ['🤨', '😎','🤐','😛','🤑','🥶','🥹','🥳', ';🫢', '🥱']
+    const emojis = ['🤨', '😎','🤐','😛','🤑','🥶','🥹','🥳', '🫢', '🥱']
     const picks = pickRandom(emojis, (dimensions * dimensions) / 2) 
     const items = shuffle([...picks, ...picks])
     const cards = `
@@ -118,9 +118,9 @@ const flipCard = card => {
             selectors.boardContainer.classList.add('flipped')
             selectors.win.innerHTML = `
                 <span class="win-text">
-                    You won!<br />
-                    with <span class="highlight">${state.totalFlips}</span> moves<br />
-                    under <span class="highlight">${state.totalTime}</span> seconds
+                    Você ganhou!<br />
+                    com <span class="highlight">${state.totalFlips}</span> moves<br />
+                    em <span class="highlight">${state.totalTime}</span> seconds
                 </span>
             `
 
